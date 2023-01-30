@@ -1,0 +1,46 @@
+@import url("reset.css");
+
+* {
+    color: rgb(9, 6, 16);
+}
+h1{
+    color: rgb(38, 0, 254);
+}
+.item{
+    color: chocolate;
+
+}
+#sb1{
+    color: rgb(209, 9, 9);
+}
+p.text{
+    color: darkblue;
+}
+.text2.textp{
+    color: green;
+}
+.text3,
+.text4{
+    color: crimson;
+}
+.block p{
+    color: rgb(219, 219, 6);
+}
+.block2 .subtitle{
+    color: rgb(240, 29, 138);
+}
+.block3 *{
+    color: aqua;
+}
+.block3 > p{
+    color: black;
+}
+.sbt ~ p{
+    color: red;
+}
+#sb9 + p{
+    color: chartreuse;
+}
+[class*="__container"]{
+    color: rgb(15, 6, 188);
+}
