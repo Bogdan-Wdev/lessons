@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:300,500,700&display=swap");
+
+@font-face {
+    font-family: 'Slant';
+    src: url("../fonts/Slant.woff2") format("woff2"), url("../fonts/Slant.woff") format("woff");
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+body{
+    font-family:"Josefin Sans";
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 2;
+    letter-spacing: 16px;
+    text-align: center;
+}
+.menu { 
+    font-family:"Slant";
+    font-size: 18px;
+    text-transform: capitalize;
+    word-spacing: 10px;
+}
+.item {
+    text-indent: 20px
+
+}
+.item:nth-child(odd) {
+    text-indent: 25px;
+    line-height: 1.4;
+}
+
+.title {
+    font-family:"Kalam";
+    font-size: 20px;
+    line-height: 2;
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-align: center;
+}
+#t2 {
+    text-align: unset;
+    text-indent: 250px
+}
+
+.text {
+    text-indent: 10px;
+    text-align: justify;
+}
+#t1 + p {
+    
+    text-align: center;
+}
+#t8 + p {
+    white-space: nowrap;
+}
+
+.subtitle {
+    font-size: 14px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+.green {
+    color: green;
+    text-decoration: line-through;
+    font-weight: bold;
+}
+.red {
+    color: rgba(73, 0, 0, 0);
+    text-shadow: 50px 7px  3px #fd0000, 0px -7px 2px #fd0000, 100px -7px 4px #fd0000;
+    line-height: 2.2;
+    
+
+}
+
+.footer {
+    font-family: "Kalam";
+    line-height: 2.5;
+    letter-spacing: 10px;
+    text-transform: lowercase;
+    text-decoration: overline;
+    text-align: right;
+}
