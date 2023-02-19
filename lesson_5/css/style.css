@@ -1,0 +1,155 @@
+body {
+    font-family: "Poppins";
+    font-size: 16px;
+    font-weight: normal;
+}
+
+[class*="__container"] {
+    max-width: 1270px;
+    margin: 0 auto;
+    padding: 0 15px 0;
+}
+
+[class*="__block"] {
+    max-width: 816px;
+    margin: 0 auto;
+    margin-bottom: 80px;
+}
+
+[class*="__title"] {
+    color: #212529;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: calc(40/25);
+    margin-bottom: 40px;
+}
+
+p {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: calc(25/14);
+    color: #6C757D;
+}
+
+p+p {
+    margin-top: 26px;
+                        /* Чи має право на життя таке рішення? Щоб не було відступу
+                         у останього елемента, так як чайлди ще не вчили, плюс я розумію
+                         що по правилах зверху вниз треба робити відступи, та і взагалі цікаво,
+                         чи використовується такий метод на практиці
+                         */
+}
+
+
+.block-happy__title {
+    max-width: 400px;
+}
+
+.happy__item {
+    width: 100%;
+    margin-bottom: 80px;
+}
+
+.block-success__title {
+    max-width: 605px;
+}
+
+.success__images {
+    font-size: 0;
+    margin-bottom: 80px;
+}
+
+.success__image {
+    max-width: 100%;
+}
+
+.success__image_1 {
+    margin-right: 30px;
+}
+
+
+/* --------------------------------------------------------------------- */
+
+.training p {
+    color: black;
+    font-weight: bold;
+    margin-top: 0;
+    text-align: center;
+}
+
+.padding {
+    max-width: 550px;
+}
+
+.all-side {
+    background-color: aquamarine;
+    padding: 30px;
+}
+
+.up-down-right-left {
+    background-color: rgb(253, 179, 18);
+    padding: 20px 30px;
+}
+
+.up-right-left-down {
+    background-color: aquamarine;
+    padding: 10px 20px 30px;
+    height: 200px;
+    overflow: auto;
+}
+
+.up-right-down-left {
+    background-color: rgb(253, 179, 18);
+    padding: 5px 10px 15px 20px;
+}
+
+.percent {
+    background-color: aquamarine;
+    padding: 20%;
+}
+
+.image-padding {
+    background-color: black;
+    max-width: 300px;
+    padding: 10px;
+    vertical-align: middle;
+    display: inline;
+}
+.after-img {
+    display: inline-block;
+}
+
+.margin {
+    margin-top: 20px;
+    max-width: 350px;
+}
+
+.one {
+    background-color: rgb(253, 179, 18);
+    margin: 0 20px 0;
+}
+
+.two {
+    background-color: aquamarine;
+    margin: 0 20px 30px 40px;
+}
+
+.three {
+    background-color: rgb(253, 179, 18);
+    margin-left: 15px;
+}
+
+.four {
+    background-color: aquamarine;
+    margin-bottom: 10px;
+}
+
+.five {
+    background-color: rgb(253, 179, 18);
+    margin: 10%;
+}
+
+.image-margin {
+    width: 300px;
+    margin-bottom: 20px;
+}
