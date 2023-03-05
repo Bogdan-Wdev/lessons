@@ -63,6 +63,7 @@ body {
 }
 
 .list-unorder {
+    min-width: 315px;
     display: inline-block;
     margin: 0 80px 10px 0;
 }
@@ -70,6 +71,7 @@ body {
 
 
 .list-unorder__item {
+    max-width: 315px;
     min-height: 25px;
     padding-left: 35px;
     margin-bottom: 18px;
