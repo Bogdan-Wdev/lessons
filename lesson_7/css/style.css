@@ -63,8 +63,8 @@ body {
 }
 
 .list-unorder {
-    min-width: 315px;
     display: inline-block;
+    min-width: 315px;
     margin: 0 80px 10px 0;
 }
 
