@@ -188,7 +188,9 @@ span{
 .trending {
     margin-bottom: 100px; /* якщо так робити це помилка, то вирішення - зробити модифікатор секції?*/
 }
-
+.body-trending__title{
+    margin-bottom: 45px;
+}
 
 .body-trending__block {
     max-width: 393px;
