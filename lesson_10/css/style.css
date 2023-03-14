@@ -1,0 +1,258 @@
+body{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: calc(25/16);
+    color: #212529;
+}
+span{
+    color: #DDBEA9;
+}
+[class*="__container"]{
+    max-width: 1270px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.header__body {
+    padding: 37px 0 38px;
+}
+
+.body-header__logo,
+.body-footer__logo,
+.body-header__menu,
+.body-footer__menu,
+.body-footer__social,
+.menu__list,
+.body-header__social,
+.menu__item,
+.body-header__search{
+    display: inline-block;
+}
+.body-header__logo{
+    margin-right: calc(408/(1240-65)*100%);   /* в 10му уроці я "типу" ще флекси не знаю,тому так, і це я тестую як поведуть себе % */
+}
+
+
+.menu,
+.social {
+    font-weight: 500;
+    font-size: 12px; 
+    line-height: calc(25/12);
+    color: rgba(73, 80, 87, 0.5);
+}
+/* .menu__list,
+.social__items{
+    font-weight: 500;                      і ось тут я завагався, 
+                                        адже згідно БЕМ fw,fz and lh неможна використовувати
+                                        чи то  чатЖПТ надімною пожартував, та це стосується тільки 
+                                        зовнішніх відступів? Краще було використати ці класи?
+                                        Чи я сам себе заплутав? Що тоді можна задати .menu та.social, display: inline-block
+                                        чи це теж впливає на оточення?
+    font-size: 12px;                                                                            
+    line-height: calc(25/12);
+    color: rgba(73, 80, 87, 0.5);
+} */
+
+.body-header__menu{
+    margin-right: calc(324/(1240-295)*100%);
+}
+.menu__list .menu__item:not(:last-child),
+.social__items .social__link:not(:last-child) {
+    margin-right: 25px;
+}
+
+.social__link_border{
+    padding-right: 5px;     
+    border-right: 1px solid #E5E5E5; ;
+}
+.body-header__social{
+    margin-right: 15px;     
+}
+.body-header__search img{
+    vertical-align: middle;
+}
+
+.body-header__menu > .menu__list > li:hover {
+    color: #495057;
+    /* box-shadow: 0px 2px 0px 0px rgba(245,189,106,1); */
+    border-bottom: 2px solid #ddbea9;
+}
+
+.body-header__menu > .menu__list > li{
+    border-bottom: 2px solid #ddbea900;
+    border-radius: 2px;
+}
+
+.slider {
+    margin-bottom: 140px; /* якщо так робити це помилка, то вирішення - зробити модифікатор секції?*/
+   
+}
+
+.slider__body {
+    background: url(../img/slider/slider.webp) no-repeat ;
+    padding: 192px 0 40px;
+}
+.body-slider {
+    text-align: center;
+}
+.body-slider__link {
+    display: inline-block;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: calc(20/12);
+    color: #E5E5E5;
+    margin-bottom: 15px;
+
+}
+.body-slider__title {
+    margin-bottom: 132px;
+}
+.body-slider__item{
+    
+    display: inline-block;
+}
+.body-slider__item::before{
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    height: 1px;
+    width: 44px;
+    background: #F8F9FA;
+    margin-right: 10px;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 25px;
+    line-height: calc(40/25);
+    color: #212529;
+}
+.title_white{
+    color: #F8F9FA;
+}
+.body-slider__item{
+    font-weight: 300;
+    font-size: 12px;
+    line-height: calc(20/12);
+    color: #E5E5E5;
+}
+
+
+.design {
+    margin-bottom: 100px; /* якщо так робити це помилка, то вирішення - зробити модифікатор секції?*/
+}
+
+.body-design__item {
+    margin-bottom: 40px;
+}
+.body-design__title {
+    max-width: 393px;
+    margin-right: 243px;
+}
+.body-design__title,
+.body-design__menu {
+    display: inline-block;
+}
+.body-design__menu > .menu__list > li:hover {
+    color: #495057;
+}
+.menu_color {
+    color: #C4C4C4;
+}
+
+.body-design__block {
+    max-width: 393px;
+    display: inline-block;
+    margin: 0 10px 40px 0;
+}
+
+
+.block-design__img {
+    margin-bottom: 30px;
+    border-radius: 3px;
+}
+.block-design__date {
+    margin-bottom: 15px;
+}
+.date {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: calc(20/12);
+    color: #495057;
+}
+
+
+.trending {
+    margin-bottom: 100px; /* якщо так робити це помилка, то вирішення - зробити модифікатор секції?*/
+}
+
+
+.body-trending__block {
+    max-width: 393px;
+    display: inline-block;
+    background: url(../img/trending/trending2.webp) no-repeat;
+    padding: 315px 50px 50px;
+    margin: 0 15px 30px 0;
+}
+.block-trending_big{
+    max-width: 806px;
+    display: inline-block;
+    background: url(../img/trending/trending1.webp) no-repeat;
+    padding: 315px 424px 50px 50px;
+}
+.block-trending_3{
+    background: url(../img/trending/trending3.webp) no-repeat;
+}
+.block-trending_4{
+    background: url(../img/trending/trending4.webp) no-repeat;
+}
+.block-trending_5{
+    background: url(../img/trending/trending5.webp) no-repeat;
+}
+
+.block-trending__date {
+    color: #E5E5E5;
+    margin-bottom: 15px;
+}
+
+
+.subtitle_white {
+    color: #F8F9FA;
+}
+
+.footer {
+    background: #212529;
+    padding: 100px 0;
+}
+
+.body-footer__block{
+    border-bottom: 1px solid rgba(229, 229, 229, 0.2);
+}
+.body-footer__logo {
+    margin-right: 371px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: calc(25/18);
+    color: #F8F9FA;
+}
+.body-footer__menu,
+.body-footer__social,
+.body-footer__adress,
+.body-footer__rights {
+    color: rgba(248, 249, 250, 0.5);
+}
+.body-footer__menu{
+    margin-right: 380px;
+}
+
+.body-footer__rights,
+.body-footer__adress {
+    display: inline-block;
+    font-size: 12px;
+    line-height: calc(20/12);
+}
+.body-footer__adress{
+    margin-right: 873px;
+}
