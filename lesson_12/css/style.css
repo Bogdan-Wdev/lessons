@@ -1,0 +1,183 @@
+body {
+    background-color: rgb(216, 216, 216);
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #000000;
+    
+}
+
+
+[class*="__container"] {
+    max-width: 830px;
+    padding: 15px 15px;
+    margin: 0 auto;
+}
+
+.wrapper {
+    /* min-height: 100%; */
+    overflow: clip;
+}
+
+
+
+.wrapper__item {
+    display: inline-block;
+    width: 240px;
+    margin: 0 15px 15px 0;
+    background-color: rgb(141, 141, 141);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.wrapper__item img {
+    width: 100%;
+    border-radius: 5px;
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+    
+    visibility: hidden;
+}
+
+.wrapper__item .item-wrapper__images img {
+
+    opacity: 1;
+    visibility: visible;
+}
+
+.wrapper__item:hover img {
+    opacity: 1;
+    visibility: visible;
+}
+
+.wrapper__item:nth-child(1):hover img {
+    transform: translate(20px, 10px);
+
+}
+
+.wrapper__item:nth-child(2):hover img {
+    transform: scale(-0.4);
+}
+
+.wrapper__item:nth-child(3):hover img {
+    transform: rotate(90deg);
+}
+
+.wrapper__item:nth-child(4):hover img {
+    transform: skew(20deg, 10deg);
+}
+
+.wrapper__item:nth-child(5):hover img {
+    transform: matrix(1, 2, 3, 4, 5, 6);
+}
+
+.wrapper__item:nth-child(6):hover img {
+    transform-origin: 30% 0;
+    transform: rotate(90deg);
+}
+
+.wrapper__item:nth-child(7):hover .item-wrapper__images {
+    opacity: 1;
+    visibility: visible;
+}
+
+.wrapper__item:nth-child(7):hover .item-wrapper__front {
+    transform: rotateY(-180deg);
+
+}
+
+.wrapper__item:nth-child(7):hover .item-wrapper__back {
+    transform: rotateY(0deg);
+
+}
+
+.wrapper__item:nth-child(8):hover img {
+    transform: translate(-20px, 10px) rotate(33deg) scale(1.3);
+}
+.wrapper__item:nth-child(9){
+    perspective: 500px;
+}
+.wrapper__item:nth-child(9):hover img{
+    transform: rotateX(50deg) ;
+}
+
+
+
+.wrapper__item:nth-child(7) .item-wrapper__front,
+.wrapper__item:nth-child(7) .item-wrapper__back {
+
+    transition: all 2.5s ease-in-out;
+}
+
+.item-wrapper {
+    vertical-align: top;
+    perspective: 500px;
+    transform-style: preserve-3d;
+}
+
+
+.item-wrapper__body {
+    position: relative;
+    width: 240px;
+    height: 132px;
+    transition: all 0.8s ease 0s;
+    transform-style: preserve-3d;
+}
+
+.item-wrapper__front,
+.item-wrapper__back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.item-wrapper__images {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 1.5s ease 0s;
+}
+
+.item-wrapper__front {
+    z-index: 1;
+    transform: rotateY(0deg);
+    backface-visibility: hidden;
+
+}
+
+.item-wrapper__back {
+
+    transform: rotateY(-180deg);
+
+}
+
+.wrapper__btn{
+    text-align: center;
+    margin: 0 auto;
+}
+.wrapper__btn a{
+    color: aliceblue;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: blue;
+    border-radius: 25%;
+    animation: example 1s alternate infinite;
+    transition: all 0.5s;
+}
+
+@keyframes example {
+    
+    100% { transform: translateX(20px); }
+}
+
+.wrapper__btn a:hover {
+    animation-play-state: paused;
+    
+}
