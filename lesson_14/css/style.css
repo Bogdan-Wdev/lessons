@@ -1,0 +1,181 @@
+body{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 2;
+    color: #495057;
+    background:#F8F9FA;
+}
+.wrapper {
+	overflow: clip;
+	min-height: 100%;
+}
+[class*="__container"]{
+    max-width: 1270px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.wrapper__categories{
+    margin: 100px 0;
+}
+.wrapper .categories + div {
+    height: 1px;
+}
+
+.categories__top {
+    margin-bottom: 44px;
+}
+
+.menu {
+    color: rgba(73, 80, 87, 0.5);
+    
+}
+.menu__list {
+    display: flex;
+    gap: 20px;
+    
+}
+.menu__item:first-child {
+    flex: 1 1 auto;             /*наскільки такий варіант краще, ніж якщо робити 
+                                2 флєкс-елементи, тобто "categories+" та "3 column & 4 column"
+                                робити в окремих обгортках та додавати контейнеру space-between.
+                                Як на мене, у варіанті який зробив  в html & css менше коду та начебто
+                                не бачу в майбутньому проблем, чи є :)?*/
+    color: #495057;
+
+}
+.menu__item_active{
+    color: #495057;
+}
+.menu__link{
+    transition: all 0.3s;
+    border-radius: 3px;
+}
+.menu__link:hover {
+    box-shadow:0 1px 1px rgba(73, 80, 87, 0.555);
+}
+
+
+
+.categories__block {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px 60px;
+    row-gap: 45px;
+}
+
+.card {
+    position: relative;
+    padding: 0 15px;
+    flex: 0 0 33.333%;
+}
+.card__img {
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 3px;
+    margin-bottom: 30px;
+}
+.card__img img{
+    max-width: 100%;
+    transition: all 0.8s;
+}
+.card__wrapper:hover img{
+    transform: scale(1.1);
+}
+.card__btn:hover {
+    text-decoration: underline;
+}
+.card__btn {
+    position: absolute;
+    top: 33px;
+    right: 41px;
+    padding: 3px 12px;
+    font-weight: 700;
+    font-size: 8px;
+    line-height: 2.5;
+    border-radius: 3px;
+    color: #F8F9FA;
+    background-color: rgba(33, 37, 41, 0.3);
+    text-transform: uppercase;
+}
+
+.text p,
+.text__date,
+.text__title,
+.text__author{
+    font-weight: 300;
+    line-height: 1.6;
+}
+.text *:not(:last-child){
+    margin-bottom: 15px;
+}
+.text__title {
+    display: inline-block;
+    position: relative;
+    font-weight: 700;
+    font-size: 25px;
+    color: #212529;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+.text__title::after{
+    content: "";
+    display: inline-block;
+    border-radius: 8px;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    
+    transition: all 1.3s ease;
+
+}
+.text__title:hover{
+    text-shadow: 2px 2px 2px #727272;
+}
+.text__title:hover::after{
+    opacity: 1;
+    left: 100%;
+}
+.text__decor{
+    max-width: 100%;
+    height: 1px;
+    background-color: #E5E5E5;
+}
+.text__author {
+    display: inline-block;
+    transition: all 0.3s;
+}
+.text__author:hover{
+    text-shadow: 1px 1px 3px #000000;
+}
+.categories__btn{
+    text-align: center;
+}
+.categories__btn a{
+    display: inline-block;
+    background: #212529;
+    border-radius: 3px;
+    padding: 8px 50px;
+    text-align: center;
+    color: #F8F9FA;
+    
+}
+
+.categories__btn a:hover {
+    animation: btn-animation 0.6s linear infinite alternate;
+}
+
+@keyframes btn-animation {
+    0% {
+    text-shadow: none;
+    }
+    100% {
+    text-shadow: 0px 0px 15px #ffffff;
+    border-radius: 10px;
+    }
+}
