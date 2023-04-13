@@ -1,0 +1,195 @@
+body{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.6;
+    color:#9C9C9C;
+    width: 100%;
+}
+
+[class*="__container"]{
+    max-width: 1230px;
+    padding: 0 15px;   
+    margin: 0 auto;
+}
+.wrapper {
+}
+.wrapper__header {
+    height: 100px;
+    margin-bottom: 97px;
+}
+.header__container {
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 10px;
+}
+.header__logo {
+    flex: 1 1 126px;
+}
+.logo {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
+.logo__text {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 1.7;
+    color: #000000;
+    opacity: 0;
+    animation: logo-text 0.8s linear forwards;
+}
+@keyframes logo-text {
+    
+    100%{
+        opacity: 1;
+    }
+    
+}
+
+.logo__img {
+    position: absolute;
+    bottom: -100%;
+    left: 54px;
+    animation: logo-img 0.8s linear forwards;
+}
+@keyframes logo-img {
+    90%{
+    bottom:9px;
+    }
+    95%{
+        bottom:3px;
+    }
+    100%{
+    bottom:6px;
+    }
+    
+}
+
+.header__menu {
+    margin-right: 64px;
+    padding-bottom: 14px; /* чогось іншими методами не стає по макету*/
+}
+.menu {
+    font-weight: 400;
+    font-size: 16px;  
+    color: #333333;
+}
+.menu__list {
+}
+.menu__item {
+    display: inline-block;
+    
+}
+.menu__item_active{
+    font-weight: 600;
+}
+.menu__item:not(:last-child){
+    margin-right: 74px;
+}
+.menu__link {
+}
+.header__btn {
+    background: #2C3878;
+    border: 1px solid #3C3C3C;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #FFFFFF;
+    padding: 14px 32px;
+    transition: all 0.3s;
+}
+.header__btn:hover{
+    background: #FFFFFF;
+    color: #2C3878;
+}
+
+.page__services{
+    margin-bottom: 100px;
+}
+.services {
+}
+.services__container {
+}
+.services__block {
+}
+.block {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.block__title {
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 1.4;
+    color: #000000;
+    margin-bottom: 36px;
+    
+}
+.block__text {
+    max-width: 518px;
+    text-align: center;
+    font-size: 18px;
+    color: #000000;
+    margin-bottom: 57px;
+}
+.block__img {
+    flex: 0 0 67.5%;
+}
+.block__img img{
+    width: 100%;
+    height: 100%;
+}
+
+.page .achievement + div{
+    height: 1px;
+}
+.page__achievement {
+    margin-bottom: 100px;
+}
+.achievement__container > *:not(:last-child){
+    margin-bottom: 40px;
+}
+.achievement__title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #000000;
+    position: relative;
+}
+.achievement__title::after{
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    left: 132px;
+    width: 464px;
+    height: 2px;
+    background-color: #000000;
+    
+}
+
+.body-achievement {
+    display: flex;
+    align-items: center;
+    gap: 120px;
+}
+.body-achievement__img {
+    overflow: hidden;
+    flex: 0 0 62.16%;
+}
+.body-achievement__img img{
+    width: 100%;
+}
+.body-achievement__text {
+}
+.body-achievement__title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.4;
+    color: #333333;
+    
+}
