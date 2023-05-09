@@ -1,6 +1,16 @@
 const menuToggle = document.querySelector('.menu__toggle');
-const menuList = document.querySelector('.menu__list');
+
 
 menuToggle.addEventListener('click', () => {
-  menuList.classList.toggle('menu__list--visible');
+  menuToggle.classList.toggle('menu__toggle--visible');
+});
+
+
+document.addEventListener('click', (event) => {
+  const target = event.target;
+  const menu = document.querySelector('.menu');
+
+  if (!menu.contains(target)) {
+    menuToggle.classList.remove('menu__toggle--visible');
+  }
 });
