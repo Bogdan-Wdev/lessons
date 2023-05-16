@@ -201,9 +201,10 @@ body{
 }
 
 .block {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+    /* display: flex; */
+    /* align-items: center; */   /* чомусь з цим не працюэ адаптивне зображення*/
+    /* flex-direction: column; */
+    text-align: center;
 }
 .block__title {
     font-weight: 700;
@@ -218,14 +219,24 @@ body{
     text-align: center;
     font-size: 18px;
     color: #000000;
+    margin: 0 auto;
     margin-bottom: 57px;
 }
 .block__img {
-    flex: 0 0 67.5%;
+    /* flex: 0 1 67.5%; */
     overflow: hidden;
+    position: relative;
+    padding-bottom: 42%;
 }
 .block__img img{
     width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    object-position: center;
+    
     transition: all 0.3s;
 }
 .block__img:hover img{
@@ -233,13 +244,17 @@ body{
 }
 
 @media (max-width: 450px){
-    .block {
-        margin-bottom: 16px;
+    .block__text{
+        margin-bottom: 20px;
+    }
+    .block__img{
+        padding-bottom: 50%;
     }
     .block__title {
-        font-size: 44px;
-        
+        font-size: 32px;
+        margin-bottom: 16px;
         text-align: center;
+        
     }
 
 }
