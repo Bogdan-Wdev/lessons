@@ -1,16 +1,14 @@
 const menuToggle = document.querySelector('.menu__toggle');
 
-
 menuToggle.addEventListener('click', () => {
   menuToggle.classList.toggle('menu__toggle--visible');
 });
 
+window.addEventListener('resize', () => {
+  const windowWidth = window.innerWidth;
+  const menuToggle = document.querySelector('.menu__toggle');
 
-document.addEventListener('click', (event) => {
-  const target = event.target;
-  const menu = document.querySelector('.menu');
-
-  if (!menu.contains(target)) {
+  if (windowWidth >= 920) {
     menuToggle.classList.remove('menu__toggle--visible');
   }
 });
