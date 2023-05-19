@@ -89,7 +89,7 @@
                             <h3 class="discount-body__title">Apply Coupon to get discount!</h3>
                             <input autocomplete="off" name="username" placeholder="Coupon code" value="" type="text">
                             <button type="button">Apply Code</button>
-                            <button class="discount-body__submit" type="submit">Send Info</button>
+                            <button class="discount-body__submit submit-btn" type="submit">Send Info</button>
                         </div>
                     </div>
                 </form>
@@ -117,7 +117,7 @@
                         <h3 class="form-shipping__subtitle">You already have an account with us. Sign in or continue as
                             guest.</h3>
                         <div class="form-shipping__unit">
-                            <button type="submit" title="ваше или не ваше имя">login</button>
+                            <button type="submit" title="тицяй вже">login</button>
                             <a href="" class="form-shipping__link">Forgot Your Password?</a>
                         </div>
                     </div>
@@ -147,7 +147,7 @@
                         </div>
                         <div class="form-shipping__item">
                             <label>Country <span>*</span></label>
-                            <input autocomplete="off" name="address" value="" type="text">
+                            <input autocomplete="off" name="address" required value="" type="text">
                         </div>
                         <div class="form-shipping__item">
                             <label>State/Province <span>*</span></label>
@@ -184,6 +184,9 @@
                             </div>
                         </div>
                     </div>
+                    <div class="form-shipping__btn">
+                    <button class="form-shipping__submit submit-btn" type="submit">Send Info</button>
+                </div>
                 </form>
                 <div class="shipping__item item-shipping-block">
                     <a href="" class="item-shipping-block__btn item-shipping-block__btn_black">Next</a>

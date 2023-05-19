@@ -163,6 +163,7 @@ input[type="checkbox"] {
     flex: 0 1 46%;
     height: 48px;
 }
+.submit-btn,
 .form-billing__discount button{
     padding: 12px 24px;
     background-color: #212B36;
@@ -434,6 +435,20 @@ select {
     align-items: center;
     max-width: 610px;
 }
+.form-shipping__btn{
+    display: flex;
+}
+.form-shipping__submit{
+    flex: 0 1 100%;
+}
+@media (any-hover:hover){
+.form-shipping__submit:hover{
+    background-color: #000000;
+}
+}
+
+
+
 .item-shipping-block__btn {
     font-family: 'Oswald';
     font-style: normal;
