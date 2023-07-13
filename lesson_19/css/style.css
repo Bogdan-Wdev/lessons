@@ -1,0 +1,84 @@
+html,
+body{
+	max-width: 100%;
+}
+
+body {
+	/* Значення за замовченням */
+	font-family: Inter;
+	font-size: 28px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 35px;
+	/* font-size: 16px; */
+	
+}
+
+.wrapper {
+	overflow: hidden;
+	min-height: 100%;
+	/* position: relative; */
+
+	display: flex;
+	flex-direction: column;
+}
+.wrapper > main {
+	flex-grow: 1;
+}
+[class*="__container"] {
+	padding-left: 15px;
+	padding-right: 15px;
+	max-width: 1200px; 
+	margin: 0 auto;
+}
+
+
+
+.wrapper__container {
+}
+.page {
+}
+.hero {
+}
+.hero__container {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	
+	gap: 30px;
+}
+.hero__item {
+	position: relative;
+	grid-column: span 2;
+}
+.hero__item_big{
+	grid-row: span 2;
+}
+.item-hero {
+}
+.item-hero__block {
+	position: absolute;
+	top: 40px;
+	left: 40px;
+	z-index: 1;
+}
+.block {
+}
+.block__tag {
+}
+.block__text {
+}
+.item-hero__image {
+	padding-bottom: 42%;
+	
+}
+.item-hero__image img{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: bottom;
+	top: 0;
+    left: 0;
+	transition: all 0.3s;
+	cursor: pointer;
+}
