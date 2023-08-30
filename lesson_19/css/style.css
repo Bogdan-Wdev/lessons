@@ -626,14 +626,14 @@ body {
 	transition: all 0.3s;
 	cursor: pointer;
 }
-.item-block-latest__info {
+.block-latest__info {
 	display: flex;
 	justify-content: space-between;
 	gap: 10px;
 	margin-bottom: 4px;
 }
 
-.item-block-latest__title {
+.block-latest__title {
 	color: #212B36;
 
 	font-size: 20px;
@@ -642,7 +642,7 @@ body {
 	line-height: 1.3;
 }
 
-.item-block-latest__price {
+.block-latest__price {
 	color: #3056D3;
 	font-size: 16px;
 	font-weight: 700;
@@ -843,8 +843,7 @@ body {
 .shop {
 	margin-bottom: 120px;
 }
-.shop__container {
-}
+
 .shop__title {
 }
 .shop__text {
@@ -877,12 +876,7 @@ body {
 	border: 1px solid #E7E7E7;
 	border-radius: 12px;
 }
-.block-shop {
-}
-.block-shop__item {
-}
-.item-block-shop {
-}
+
 .item-block-shop__img {
 	position: relative;
 	padding-bottom: 67%;
@@ -900,14 +894,14 @@ body {
 	transition: all 0.3s;
 	cursor: pointer;
 }
-.item-block-shop__info {
+.block-shop__info {
 }
-.item-block-shop__category {
+.block-shop__category {
 	color:  #637381;
 	font-size: 16px;
 	line-height: 1.5;
 }
-.item-block-shop__title {
+.block-shop__title {
 	color:  #212B36;
 	font-size: 24px;
 	line-height: 1.25; 
@@ -967,14 +961,12 @@ body {
 	text-align: center;
 	justify-content: space-between;
 }
-.block-top-collections {
-}
+
 .block-top-collections__item {
 	display: block;
 	margin-bottom: 20px;
 }
-.item-block-top-collections {
-}
+
 .item-block-top-collections__img {
 	position: relative;
 	padding-bottom: 93%;
@@ -992,29 +984,29 @@ body {
 	transition: all 0.3s;
 	cursor: pointer;
 }
-.item-block-top-collections__info {
+.block-top-collections__info {
 	display: flex;
 	flex-direction: column;
 	gap: 5px;
 	margin-bottom: 20px;
 }
-.item-block-top-collections__title {
+.block-top-collections__title {
 	color: var(--tail-grids-black-color, #212B36);
 	font-size: 20px;
 	line-height: 1.3; /* 130% */
 }
-.item-block-top-collections__price {
+.block-top-collections__price {
 	color: var(--tail-grids-black-color, #212B36);
 	font-size: 16px;
 	line-height: 1.5;
 }
-.item-block-top-collections__price span{
+.block-top-collections__price span{
 	color: #637381;
 	text-decoration: line-through 1px #637381;
 	display: inline-block;
 	margin-right: 10px;
 }
-.item-block-top-collections__btn {
+.block-top-collections__btn {
 	color: #212B36;
 	font-size: 14px;
 	line-height: 1.43;
@@ -1026,7 +1018,7 @@ body {
 	max-width: 110px;
 	align-self: center;
 }
-.item-block-top-collections__btn:hover{
+.block-top-collections__btn:hover{
 	color: #FFF;
 	background-color: #212B36;
 }
@@ -1039,7 +1031,7 @@ body {
 	.top-collections__wrapper {
 		grid-template-columns: repeat(1, 1fr);
 	}
-	.item-block-top-collections__btn{
+	.block-top-collections__btn{
 		max-width: 100%;
 		width:100%;
 	}
