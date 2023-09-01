@@ -1,16 +1,15 @@
 html,
 body {
-	/* max-width: 100%; */
+	max-width: 100%;
 }
 
 body {
-	/* Значення за замовченням */
 	font-family: Inter;
 	font-size: 28px;
 	font-style: normal;
 	font-weight: 600;
 	line-height: 1.25;
-	/* font-size: 16px; */
+
 
 }
 
@@ -59,7 +58,6 @@ body {
 	grid-row: span 2;
 }
 
-.item-hero {}
 
 .item-hero__block {
 	position: absolute;
@@ -68,9 +66,6 @@ body {
 	z-index: 1;
 }
 
-.block {
-	
-}
 
 .block__tag {
 	color: #637381;
@@ -249,9 +244,7 @@ body {
 .block-products__item >*{
 	padding-left: 25px;
 }
-.item-block-products__review {
-	
-}
+
 
 .item-block-products__price {
 	color: #212B36;
@@ -260,8 +253,7 @@ body {
 	padding: 15px;
 }
 
-.item-block-products__footer {
-}
+
 .item-block-products__form{
 	position: relative;
 	display: flex;
@@ -325,9 +317,6 @@ body {
 	padding: 15px;
 }
 
-.products__slider {}
-
-.products__slider {}
 
 .slider {
 	display: flex;
@@ -425,11 +414,7 @@ body {
 	}
 }
 
-.trending {}
 
-.trending__container {}
-
-.trending__title {}
 
 .trending__wrapper {
 	border-top: 1px solid #E7E7E7;
@@ -448,11 +433,7 @@ body {
 	gap: 10px;
 }
 
-.block-trending {}
 
-.block-trending__item {}
-
-.item-block-trending {}
 
 .item-block-trending__img {
 	position: relative;
@@ -504,8 +485,7 @@ body {
 	font-size: 18px;
 	color:rgba(255, 166, 69, 1) ;
 }
-.form-block-trending {
-}
+
 .form-block-trending__items {
 	position: absolute;
 	width: 100%;
@@ -580,9 +560,7 @@ body {
 }
 
 
-.latest {}
 
-.latest__container {}
 
 .latest__subtitle {
 	color: #3056D3;
@@ -591,23 +569,21 @@ body {
 	line-height: 1.33;
 }
 
-.latest__title {}
+
 
 .latest__wrapper {
 	width: 100%;
 	grid-template-columns: repeat(4, 1fr);
 }
 
-.latest__block {}
 
-.block-latest {}
 
 .block-latest__item {
 	display: block;
 	margin-bottom: 20px;
 }
 
-.item-block-latest {}
+
 
 .item-block-latest__img {
 	position: relative;
@@ -672,20 +648,11 @@ body {
 .featured {
 	margin-bottom: 120px;
 }
-.featured__container {
-}
 .featured__subtitle {
 	color: #3056D3;
 	font-size: 18px;
 	line-height: 1.33; 
 }
-/* .featured__title {
-	color: #212B36;
-	font-size: 40px;
-	font-weight: 700;
-	line-height: 1.13; 
-	text-transform: capitalize;
-} */
 .featured__wrapper {
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
@@ -705,15 +672,11 @@ body {
 	display: inline-block;
 	margin-right: 12px;
 }
-.block-featured {
-}
+
 .featured__block_discount {
 	grid-column: span 7;
 }
-.block-featured__item {
-}
-.item-block-featured {
-}
+
 .item-block-featured__image {
 	position: relative;
 	overflow: hidden;
@@ -844,8 +807,7 @@ body {
 	margin-bottom: 120px;
 }
 
-.shop__title {
-}
+
 .shop__text {
 	display: flex;
 	justify-content: space-between;
@@ -894,8 +856,7 @@ body {
 	transition: all 0.3s;
 	cursor: pointer;
 }
-.block-shop__info {
-}
+
 .block-shop__category {
 	color:  #637381;
 	font-size: 16px;
@@ -933,10 +894,7 @@ body {
 
 
 
-.top-collections {
-}
-.top-collections__container {
-}
+
 .top-collections__subtitle {
 	color: #3056D3;
 	font-size: 18px;
@@ -1040,11 +998,7 @@ body {
 
 
 
-.minimalist-room {
-}
-.minimalist-room__container {
 
-}
 .minimalist-room__wrapper{
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
@@ -1081,8 +1035,7 @@ body {
 	grid-template-columns: repeat(2, 1fr);
 	gap: 32px;
 }
-.gallery-minimalist-room {
-}
+
 .gallery-minimalist-room__img {
 	position: relative;
 	padding-bottom: 87%;
