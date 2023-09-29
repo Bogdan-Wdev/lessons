@@ -155,6 +155,7 @@ body {
   }
 }
 .brands__block {
+  cursor: pointer;
   padding: 90px;
   overflow: hidden;
   position: relative;
@@ -482,6 +483,12 @@ body {
   border: 2px solid var(--Divider, #c4c4c4);
   display: inline-block;
   text-align: center;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.products__btn:hover {
+  color: #fff;
+  background-color: #000;
 }
 @media (max-width: 425px) {
   .products__btn {
@@ -553,17 +560,27 @@ body {
 }
 
 .block-card__title {
+  display: block;
   color: var(--Gray-4, #BDBDBD);
   font-size: 12px;
   font-weight: 600;
   line-height: 1.2;
   text-transform: uppercase;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
-.block-card p {
+.block-card__title:hover {
+  text-shadow: 1px 1px 3px #000;
+}
+.block-card__subtitle {
+  display: block;
   color: #000;
   font-size: 18px;
   font-weight: 300;
   line-height: 1.2;
+}
+.block-card__subtitle:hover {
+  text-shadow: 1px 1px 3px #000;
 }
 .block-card__price {
   color: var(--Black, #000);
@@ -716,6 +733,12 @@ body {
   border: 1px solid rgb(196, 196, 196);
   padding: 5px 15px;
   color: rgb(196, 196, 196);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.arrows > *:hover {
+  color: #000;
+  border: 1px solid #000;
 }
 .arrows__previous {
   margin-right: 4px;
