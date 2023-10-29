@@ -1,0 +1,138 @@
+@use "sass:math";
+
+@import "_mixins.scss";
+@import "_reset.scss";
+@import "_common.scss";
+
+body {
+}
+.wrapper {
+	overflow: hidden;
+	min-height: 100%;
+	position: relative;
+
+	display: flex;
+	flex-direction: column;
+}
+.wrapper > main {
+	flex-grow: 1;
+}
+[class*="__container"] {
+}
+
+.wrapper-table {
+	@media (max-width: 767.98px) {
+		overflow: auto;
+	}
+}
+
+.table {
+	width: 100%;
+	// Прибирає лінії-відступи
+	border-collapse: collapse;
+	@media (max-width: 767.98px) {
+		min-width: 700px;
+	}
+	tr {
+		&:nth-child(even) {
+			background-color: #eee;
+		}
+	}
+	th {
+		text-transform: uppercase;
+		text-align: center;
+		padding: 15px;
+		background-color: #7a956b;
+	}
+	td {
+		padding: 15px;
+		border: 1px solid #000;
+	}
+}
+
+// Відносні одиниці
+
+// Відсотки
+
+// REM - береться від глобального розміру шрифту
+// EM - береться від поточного або успаткованого розміру шрифту
+
+// Замість PX використовуємо REM
+// Але іноді:
+// Використовуємо EM коли хочемо щоб значеня тих чи інших властивостей залежали від поточного або успаткованого розміру шрифту об'єкту. Та у медіа запитах
+// Використовуємо PX тоді, коли хочемо зафіксувати значення тих чи інших властивостей
+
+.block {
+	// .block__title
+	&__title {
+		font-size: rem(50);
+		margin-bottom: em(30, 50); // 30px
+		@media (max-width: em(767.98)) {
+			font-size: rem(24);
+		}
+	}
+}
+
+// Одиниці в'юпорта VH VW VMIN VMAX
+// 1vh - 1% висоти в'юпорта
+// 1vw - 1% ширини в'юпорта
+// 1vmax - 1% більшої сторони (висоти або ширини)
+// 1vmin - 1% меньшої сторони (висоти або ширини)
+.block {
+	/*
+	height: 100vh;
+	width: 100vw;
+	font-size: 100vmin;
+	*/
+}
+
+// Змінні та calc в CSS
+
+// Змінні
+// Створення змінної
+// Глобальні змінні
+/*
+:root {
+	--mainColor: #000;
+}
+*/
+// Персональні змінні
+/*
+.block {
+	--mainColor: #000;
+}
+*/
+
+// Використання змінної
+/*
+:root {
+	--mainColor: green;
+}
+
+// Персональні змінні
+.block {
+	--mainColor: #000;
+	color: var(--mainColor);
+}
+// Глобальні змінні
+.text {
+	color: var(--mainColor);
+}*/
+
+// calc - крута штука
+/*
+.block {
+	background-color: #77608d;
+	width: calc(100% - rem(100));
+}
+*/
+
+// Інше в CSS
+// pointer-events
+// cursor
+// columns (додатково)
+
+.link {
+	cursor: pointer;
+	pointer-events: none;
+}
