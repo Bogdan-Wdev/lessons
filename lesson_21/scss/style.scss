@@ -11,6 +11,7 @@ body {
 	font-weight: 300;
 	line-height: 1.6;
 	background-color: #f8f9fa;
+	height: 100%;
 }
 body._lock {
 	overflow: hidden;
@@ -122,7 +123,7 @@ body._lock {
 					position: absolute;
 					left: 0;
 					width: 100%;
-					height: 10%;
+					height: rem(2);
 					transition: all 300ms;
 					background-color: #fff;
 				}
@@ -242,29 +243,7 @@ body._lock {
 	}
 	// .header__slider
 
-	&__slider {
-		.slider__block {
-			padding: rem(300) rem(0) rem(100);
-		}
-		.slider__pagination {
-			bottom: rem(40);
-			color: #e5e5e5;
-			position: absolute;
-			width: max-content;
-			&::before {
-				content: "";
-				position: absolute;
-				top: rem(10);
-				left: rem(-50);
-				width: rem(44);
-				height: rem(0.5);
-				background-color: #e5e5e5;
-			}
-		}
-
-		.block__author {
-		}
-	}
+	
 	.menu__item:hover .menu__link {
 		color: #f8f9fa;
 	}
@@ -379,6 +358,7 @@ body._lock {
 		visibility: hidden;
 		transition: all 300ms ease;
 		min-width: max-content;
+		max-width: rem(200);
 		overflow: hidden;
 		border-radius: rem(5);
 		pointer-events: none;
@@ -500,6 +480,8 @@ body._lock {
 .swiper-slide {
 }
 
+
+
 .wrapper {
 	// .wrapper__page
 
@@ -507,6 +489,42 @@ body._lock {
 	}
 }
 .page {
+	// page__slider
+	&__slider {
+		margin-top: rem(-100);
+		.block__img img{
+
+			opacity: 0.6;
+
+		}
+		.slider__block {
+			padding: rem(400) rem(0) rem(100);
+			background-color: #212529;
+
+		}
+		.slider__pagination {
+			bottom: rem(50);
+			color: #e5e5e5;
+			position: absolute;
+			width: max-content;
+			&::before {
+				content: "";
+				position: absolute;
+				top: rem(10);
+				left: rem(-50);
+				width: rem(44);
+				height: rem(0.5);
+				background-color: #e5e5e5;
+			}
+		}
+		.block__container_pagination{
+			position: relative;
+		}
+
+		.block__author {
+		}
+	}
+
 	// .page__categories
 
 	&__categories {
@@ -530,7 +548,7 @@ body._lock {
 			flex-wrap: wrap;
 		}
 		.menu__item {
-			white-space: nowrap;
+			// white-space: nowrap;
 		}
 		.menu__link {
 			&::after {
@@ -555,7 +573,7 @@ body._lock {
 	&__block {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
-		gap: rem(30);
+		gap: rem(40);
 		margin-bottom: rem(60);
 		@media (max-width: em(767.98)) {
 			grid-template-columns: repeat(2, 1fr);
@@ -614,7 +632,13 @@ body._lock {
 	}
 }
 .card {
-	position: relative;
+	display: flex;
+	flex-direction: column;
+	// position: relative;
+	&__wrapper{
+		position: relative;
+		margin-bottom: rem(15);
+	}
 	// .card__img
 	&__img {
 		display: block;
@@ -622,7 +646,7 @@ body._lock {
 		padding-bottom: 63%;
 		border-radius: rem(3);
 		overflow: hidden;
-		margin-bottom: rem(30);
+		
 		&::after {
 			content: "";
 			position: absolute;
@@ -663,8 +687,8 @@ body._lock {
 		color: #f8f9fa;
 		font-size: rem(8);
 		line-height: 2.5; /* 250% */
-		top: rem(30);
-		right: rem(30);
+		top: 10%;
+		right: 8%;
 		border-radius: rem(3);
 		background: rgba(33, 37, 41, 0.3);
 		padding: rem(3) rem(12);
@@ -677,7 +701,15 @@ body._lock {
 	// .card__text
 
 	&__text {
+		display: flex;
+		flex-direction: column;
+		flex: 1;
+		p{
+			flex-grow: 1;
+		}
+		
 	}
+	
 }
 
 
@@ -699,6 +731,7 @@ body._lock {
 
 	&__title {
 		color: #212529;
+		display: inline-block;
 		font-size: rem(20);
 		font-style: normal;
 		font-weight: 700;
@@ -719,6 +752,22 @@ body._lock {
 
 	&__featured-topics {
 		background-color: #212529;
+		@media (min-width: em(1024)){
+			display: flex;
+			.featured-topics__content{
+				flex: 0 0 100%;
+			}
+			.featured-topics__slider{
+				flex: 0 0 50%;
+				transform: translate(-100%, 0);
+			}
+			.slider__block{
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+		}
+		
 	}
 }
 .featured-topics {
@@ -739,10 +788,10 @@ body._lock {
 		padding: rem(100) rem(136) rem(100) 0;
 		@media (max-width: em(1024)) {
 			padding: rem(100) 0 0 0;
-			margin-bottom: rem(30);
+			margin-bottom: rem(40);
 		}
 		@media (max-width: em(767.98)) {
-			padding-top: rem(30);
+			padding-top: rem(50);
 		}
 	}
 
@@ -753,7 +802,7 @@ body._lock {
 		font-size: rem(25);
 		font-weight: 500;
 		line-height: 0.8; /* 80% */
-		margin-bottom: rem(60);
+		margin-bottom: rem(30);
 	}
 
 	// .featured-topics__tiles
@@ -768,7 +817,7 @@ body._lock {
 		@media (max-width: em(1024)) {
 			display: grid;
 			grid-template-columns: repeat(3, 1fr);
-			gap: rem(30);
+			gap: rem(40);
 		}
 		@media (max-width: em(767.98)) {
 			grid-template-columns: repeat(2, 1fr);
@@ -787,14 +836,14 @@ body._lock {
 		// padding: 31% 3% 31% 13%;
 
 		.block__img img {
-			width: 100vw;
+
 			@media (max-width: em(1024)) {
 				width: 100%;
 			}
 		}
 		.block__item {
 			text-align: center;
-			top: 50%;
+
 			@media (max-width: em(1024)) {
 				padding: 31% 3%;
 				margin: 0 auto;
@@ -803,22 +852,21 @@ body._lock {
 		.block__item p {
 			display: inline-block;
 		}
-		.slider__count {
-			left: 50%;
-		}
+		
 		.slider__pagination {
+			min-width: max-content;
 			position: absolute;
-			top: 47%;
+			bottom: 0%;
 			left: 50%;
-			width: max-content;
+			max-width: rem(30);
 			@media (max-width: em(1024)) {
-				top: 39%;
+				
 			}
 			@media (max-width: em(767.98)) {
-				top: 29%;
+				
 			}
 			@media (max-width: em(400)) {
-				top: 20%;
+				
 			}
 			&::before {
 				content: "";
@@ -840,6 +888,7 @@ body._lock {
 
 	&__card {
 		display: flex;
+		flex-direction: row;
 		align-items: flex-start;
 		@media (max-width: em(1024)) {
 			display: block;
@@ -852,6 +901,7 @@ body._lock {
 		}
 		.card__wrapper{
 			flex: 0 0 37%;
+			margin-bottom: rem(15);
 		}
 		.card__btn {
 			display: none;
@@ -862,7 +912,7 @@ body._lock {
 			margin-bottom: 0;
 			@media (max-width: em(1024)) {
 				padding-bottom: 63%;
-				margin-bottom: rem(30);
+				
 			}
 		}
 		.text > :nth-child(3) {
@@ -886,11 +936,9 @@ body._lock {
 	// .page__big-world
 
 	&__big-world {
-		padding-top: rem(100);
-		margin-bottom: rem(100);
+		padding: rem(100) 0;
 		@media (max-width: em(570)) {
-			padding-top: rem(50);
-			margin-bottom: rem(50);
+			padding: rem(50) 0;
 		}
 	}
 }
@@ -977,6 +1025,9 @@ body._lock {
 		margin-bottom: rem(40);
 		border-bottom: rem(1) solid rgba(229, 229, 229, 0.2);
 		row-gap: rem(20);
+		@media (max-width: em(570)) {
+			justify-content:center	;
+		}
 	}
 
 	// .footer__bottom
@@ -998,6 +1049,9 @@ body._lock {
 	// .top-footer__menu
 
 	&__menu {
+		.menu__list{
+			flex-wrap: wrap;
+		}
 	}
 }
 
@@ -1007,7 +1061,11 @@ body._lock {
 	&__menu {
 		.menu__list {
 			display: flex;
+			flex-wrap: wrap;
 			justify-content: space-between;
+			@media (max-width: em(570)) {
+				justify-content: center;;
+			}
 		}
 	}
 }
