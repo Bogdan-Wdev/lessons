@@ -9,9 +9,9 @@ cardTextElements.forEach(function (element) {
     // Перебираем каждый текстовый узел
     textNodes.forEach(function (textNode) {
         // Проверяем количество символов
-        if (textNode.nodeValue.length > 200) {
+        if (textNode.nodeValue.length > 100) {
             // Обрезаем текст и добавляем троеточие
-            textNode.nodeValue = textNode.nodeValue.substring(0, 200) + '...';
+            textNode.nodeValue = textNode.nodeValue.substring(0, 100) + '...';
         }
     });
 });
