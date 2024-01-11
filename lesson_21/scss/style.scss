@@ -13,8 +13,10 @@ body {
 	background-color: #f8f9fa;
 	height: 100%;
 }
-body._lock {
-	overflow: hidden;
+@media (max-width: em(767.98)) {
+	body._lock {
+		overflow: hidden;
+	}
 }
 .wrapper {
 	overflow: clip;
@@ -243,7 +245,6 @@ body._lock {
 	}
 	// .header__slider
 
-	
 	.menu__item:hover .menu__link {
 		color: #f8f9fa;
 	}
@@ -267,7 +268,7 @@ body._lock {
 .swiper-pagination-fraction {
 	right: 0;
 	left: auto;
-} 
+}
 .form-header__label {
 	cursor: pointer;
 }
@@ -288,7 +289,7 @@ body._lock {
 		top: 0;
 	}
 }
-.form-header__input._active{
+.form-header__input._active {
 	display: block;
 }
 .form-header__label img {
@@ -358,12 +359,17 @@ body._lock {
 		visibility: hidden;
 		transition: all 300ms ease;
 		min-width: max-content;
-		max-width: rem(200);
 		overflow: hidden;
 		border-radius: rem(5);
 		pointer-events: none;
 		z-index: 1;
 		padding-top: rem(40);
+		@media (min-width:em(767.98)){
+			max-width: rem(200);
+		}
+		@media (max-width:em(767.98)){
+			display: block;
+		}
 	}
 }
 .sub-menu {
@@ -480,8 +486,6 @@ body._lock {
 .swiper-slide {
 }
 
-
-
 .wrapper {
 	// .wrapper__page
 
@@ -492,18 +496,17 @@ body._lock {
 	// page__slider
 	&__slider {
 		margin-top: rem(-100);
-		.block__img img{
-
+		margin-bottom: rem(100);
+		.block__img img {
 			opacity: 0.6;
-
 		}
 		.slider__block {
 			padding: rem(400) rem(0) rem(100);
 			background-color: #212529;
-
 		}
 		.slider__pagination {
 			bottom: rem(50);
+			right: rem(10);
 			color: #e5e5e5;
 			position: absolute;
 			width: max-content;
@@ -517,7 +520,7 @@ body._lock {
 				background-color: #e5e5e5;
 			}
 		}
-		.block__container_pagination{
+		.block__container_pagination {
 			position: relative;
 		}
 
@@ -635,7 +638,7 @@ body._lock {
 	display: flex;
 	flex-direction: column;
 	// position: relative;
-	&__wrapper{
+	&__wrapper {
 		position: relative;
 		margin-bottom: rem(15);
 	}
@@ -646,7 +649,7 @@ body._lock {
 		padding-bottom: 63%;
 		border-radius: rem(3);
 		overflow: hidden;
-		
+
 		&::after {
 			content: "";
 			position: absolute;
@@ -658,13 +661,12 @@ body._lock {
 			opacity: 0;
 			transition: opacity 300ms;
 		}
-
 	}
-	&__wrapper{
+	&__wrapper {
 		&:hover .card__img img {
 			transform: scale(1.1);
 		}
-		&:hover .card__img::after{
+		&:hover .card__img::after {
 			opacity: 1;
 		}
 	}
@@ -693,7 +695,7 @@ body._lock {
 		background: rgba(33, 37, 41, 0.3);
 		padding: rem(3) rem(12);
 		z-index: 3;
-		&:hover{
+		&:hover {
 			text-decoration: underline;
 		}
 	}
@@ -704,14 +706,11 @@ body._lock {
 		display: flex;
 		flex-direction: column;
 		flex: 1;
-		p{
+		p {
 			flex-grow: 1;
 		}
-		
 	}
-	
 }
-
 
 .text {
 	> :nth-child(3) {
@@ -752,22 +751,21 @@ body._lock {
 
 	&__featured-topics {
 		background-color: #212529;
-		@media (min-width: em(1024)){
+		@media (min-width: em(1024)) {
 			display: flex;
-			.featured-topics__content{
+			.featured-topics__content {
 				flex: 0 0 100%;
 			}
-			.featured-topics__slider{
+			.featured-topics__slider {
 				flex: 0 0 50%;
 				transform: translate(-100%, 0);
 			}
-			.slider__block{
+			.slider__block {
 				display: flex;
 				align-items: center;
 				justify-content: center;
 			}
 		}
-		
 	}
 }
 .featured-topics {
@@ -836,7 +834,6 @@ body._lock {
 		// padding: 31% 3% 31% 13%;
 
 		.block__img img {
-
 			@media (max-width: em(1024)) {
 				width: 100%;
 			}
@@ -852,7 +849,7 @@ body._lock {
 		.block__item p {
 			display: inline-block;
 		}
-		
+
 		.slider__pagination {
 			min-width: max-content;
 			position: absolute;
@@ -860,13 +857,10 @@ body._lock {
 			left: 50%;
 			max-width: rem(30);
 			@media (max-width: em(1024)) {
-				
 			}
 			@media (max-width: em(767.98)) {
-				
 			}
 			@media (max-width: em(400)) {
-				
 			}
 			&::before {
 				content: "";
@@ -899,7 +893,7 @@ body._lock {
 				margin-right: 0;
 			}
 		}
-		.card__wrapper{
+		.card__wrapper {
 			flex: 0 0 37%;
 			margin-bottom: rem(15);
 		}
@@ -907,12 +901,10 @@ body._lock {
 			display: none;
 		}
 		.card__img {
-			
 			padding-bottom: 100%;
 			margin-bottom: 0;
 			@media (max-width: em(1024)) {
 				padding-bottom: 63%;
-				
 			}
 		}
 		.text > :nth-child(3) {
@@ -1026,7 +1018,7 @@ body._lock {
 		border-bottom: rem(1) solid rgba(229, 229, 229, 0.2);
 		row-gap: rem(20);
 		@media (max-width: em(570)) {
-			justify-content:center	;
+			justify-content: center;
 		}
 	}
 
@@ -1049,7 +1041,7 @@ body._lock {
 	// .top-footer__menu
 
 	&__menu {
-		.menu__list{
+		.menu__list {
 			flex-wrap: wrap;
 		}
 	}
@@ -1064,7 +1056,7 @@ body._lock {
 			flex-wrap: wrap;
 			justify-content: space-between;
 			@media (max-width: em(570)) {
-				justify-content: center;;
+				justify-content: center;
 			}
 		}
 	}
