@@ -458,11 +458,6 @@ body {
     max-width: 12.5rem;
   }
 }
-@media (max-width: 47.99875em) {
-  .menu__sub-menu {
-    display: block;
-  }
-}
 
 .sub-menu__list {
   padding: 1.25rem;
