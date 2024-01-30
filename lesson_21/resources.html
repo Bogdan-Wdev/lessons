@@ -13,7 +13,7 @@
 
 <body>
     <div class="wrapper">
-        <header id="main-header" class="wrapper__header header">
+        <header class="wrapper__header header">
             <div class="header__container">
                 <div class="header__block">
                     <a href="#" class="header__logo">VENCE<span>.</span></a>
@@ -68,30 +68,48 @@
                         </nav>
                     </nav>
                     <form method="get" enctype="multipart/form-data" action="#" class="header__form form-header">
-                        <button class="form-header__sign">Sign in</button>
-                        <button class="form-header__start">Get Started</button>
+                        <button onclick="openModal()" class="form-header__sign">Sign in</button>
+                        <button onclick="openModal()" class="form-header__start">Get Started</button>
                     </form>
+                </div>
+            </div>
+            <div class="header__popup popup">
+                <div id="overlay" class="popup__overlay"></div>
+                <div id="content" class="popup__content">
+                    <h2 class="popup__title">Sign In</h2>
+                    <form class="popup__form form-popup">
+                        <label for="username">Username or Email:</label>
+                        <input type="text" id="username" name="username" required>
+
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" required>
+                        <div class="form-popup__checkbox">
+                            <input type="checkbox" id="remember" name="remember">
+                            <label for="remember">Remember me</label>
+                        </div>
+                        <button class="form-popup__btn" type="button" onclick="signIn()">Log In</button>
+                    </form>
+
+                    <p><a href="#">Forgot password?</a></p>
+                    <p>Don't have an account? <a href="#">Sign Up</a></p>
+
+                    <button class="form-popup__btn" onclick="closeModal()">Close</button>
                 </div>
             </div>
         </header>
         <main class="wrapper__page page">
-            <div class="page__slider slider swiper">
-                <div class="slider__container">
-                    <div class="slider__wrapper swiper-wrapper">
+            <section class="page__slider slider">
+                <div class="slider__container swiper">
+                    <div class="slider__wprapper swiper-wrapper">
                         <div class="slider__block block swiper-slide">
                             <div class="block__img">
                                 <img src="img/slider/slider1.jpg" alt="Image">
                             </div>
                             <div class="block__item">
-                                <time datetime="2022-06-29" class="block__data">29.Jun.2022</time>
-                                <h2 class="block__title">I Like to Keep Things Simple to Appreciate the
-                                    Details
+                                <div class="block__author">Tomas Edwardo</div>
+                                <h2 class="block__title">Instagram artists with great
+                                    photography skills
                                 </h2>
-                                <p>Many years ago, I worked for my parents who own
-                                    a
-                                    video
-                                    production company.</p>
-                                <div class="block__author"></div>
                             </div>
                         </div>
                         <div class="slider__block block swiper-slide">
@@ -99,15 +117,10 @@
                                 <img src="img/slider/slider3.jpg" alt="Image">
                             </div>
                             <div class="block__item">
-                                <time datetime="2022-06-29" class="block__data">29.Jun.2022</time>
-                                <h2 class="block__title">I Like to Keep Things Simple to Appreciate the
-                                    Details
+                                <div class="block__author">Tomas Edwardo</div>
+                                <h2 class="block__title">Instagram artists with great
+                                    photography skills
                                 </h2>
-                                <p>Many years ago, I worked for my parents who own
-                                    a
-                                    video
-                                    production company.</p>
-                                <div class="block__author"></div>
                             </div>
                         </div>
                         <div class="slider__block block swiper-slide">
@@ -115,15 +128,10 @@
                                 <img src="img/slider/slider1.jpg" alt="Image">
                             </div>
                             <div class="block__item">
-                                <time datetime="2022-06-29" class="block__data">29.Jun.2022</time>
-                                <h2 class="block__title">I Like to Keep Things Simple to Appreciate the
-                                    Details
+                                <div class="block__author">Tomas Edwardo</div>
+                                <h2 class="block__title">Instagram artists with great
+                                    photography skills
                                 </h2>
-                                <p>Many years ago, I worked for my parents who own
-                                    a
-                                    video
-                                    production company.</p>
-                                <div class="block__author"></div>
                             </div>
                         </div>
                         <div class="slider__block block swiper-slide">
@@ -131,15 +139,10 @@
                                 <img src="img/slider/slider3.jpg" alt="Image">
                             </div>
                             <div class="block__item">
-                                <time datetime="2022-06-29" class="block__data">29.Jun.2022</time>
-                                <h2 class="block__title">I Like to Keep Things Simple to Appreciate the
-                                    Details
+                                <div class="block__author">Tomas Edwardo</div>
+                                <h2 class="block__title">Instagram artists with great
+                                    photography skills
                                 </h2>
-                                <p>Many years ago, I worked for my parents who own
-                                    a
-                                    video
-                                    production company.</p>
-                                <div class="block__author"></div>
                             </div>
                         </div>
                         <div class="slider__block block swiper-slide">
@@ -147,22 +150,189 @@
                                 <img src="img/slider/slider4.jpg" alt="Image">
                             </div>
                             <div class="block__item">
-                                <time datetime="2022-06-29" class="block__data">29.Jun.2022</time>
-                                <h2 class="block__title">I Like to Keep Things Simple to Appreciate the
-                                    Details
+                                <div class="block__author">Tomas Edwardo</div>
+                                <h2 class="block__title">Instagram artists with great
+                                    photography skills
                                 </h2>
-                                <p>Many years ago, I worked for my parents who own
-                                    a
-                                    video
-                                    production company.</p>
-                                <div class="block__author"></div>
                             </div>
                         </div>
+
                         <div class="slider__pagination swiper-pagination"></div>
                     </div>
                 </div>
-            </div>
-            
+            </section>
+            <section class="page__topics topics">
+                <div class="topics__container">
+                    <div class="topics__body">
+                        <div class="topics__sidebar sidebar">
+                            <h2 class="sidebar__title">Choose what you’d like to learn from hundreds of topics:</h2>
+                            <nav class="sidebar__menu menu">
+                                <ul class="menu__list">
+                                    <li class="menu__item"><a href="#" class="menu__link">Career & Success</a></li>
+                                    <li class="menu__item"><a href="#" class="menu__link">Personal Development</a></li>
+                                    <li class="menu__item"><a href="#" class="menu__link">Communication Skills</a></li>
+                                    <li class="menu__item"><a href="#" class="menu__link">Leadership & Management</a>
+                                    </li>
+                                    <li class="menu__item"><a href="#" class="menu__link">Relationships</a></li>
+                                    <li class="menu__item"><a href="#" class="menu__link">Self-Care & Mindfulness</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <form method="get" enctype="multipart/form-data" action="#"
+                                class="sidebar__form form-sidebar">
+
+                                <label class="form-sidebar__label" for="search-input">
+                                    <img src="img/icons/search2.svg" alt="search">
+                                </label>
+                                <input id="search-input" type="search" class="form-sidebar__input"
+                                    placeholder="Search Topic">
+                            </form>
+                        </div>
+                        <div class="topics__tiles tiles">
+                            <article class="tiles__card card">
+                                <a href="#" class="card__img">
+                                    <img src="img/topics/topics1.jpg" alt="pic">
+                                </a>
+                                <div class="card__text text">
+                                    <time datetime="2021-06-29" class="text__date">29.Jun.2021</time>
+                                    <h2><a href="#" class="text__title">Richard Norton photorealistic rendering as real
+                                            photos</a>
+                                    </h2>
+                                    <p>Many years ago, I worked for my parents who own a video production company.
+                                    </p>
+                                    <div class="text__bottom">
+                                        <a href="#" class="text__author">By: Peter Rowardson</a>
+                                        <div class="text__like like" onclick="increaseLikes(this)">
+                                            <div class="like__icon">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12"
+                                                    viewBox="0 0 13 12" fill="none">
+                                                    <path
+                                                        d="M6.3125 11.125C6 11.125 5.625 11 5.375 10.75C1.3125 7.1875 1.25 7.125 1.25 7.0625L1.1875 7C0.437499 6.25 0 5.1875 0 4.125V4C0.0625 1.75 1.875 0 4.125 0C4.8125 0 5.75 0.375 6.3125 1.125C6.875 0.375 7.875 0 8.5625 0C10.8125 0 12.5625 1.75 12.6875 4V4.125C12.6875 5.25 12.25 6.25 11.5 7.0625L11.4375 7.125C11.375 7.1875 10.875 7.625 7.3125 10.8125C7 11 6.6875 11.125 6.3125 11.125ZM2.1875 6.875C2.4375 7.125 3.6875 8 6 10C6.1875 10.1875 6.4375 10.1875 6.625 10C9 7.875 10.375 6.6875 10.6875 6.4375L10.75 6.375C11.375 5.75 11.6875 4.9375 11.6875 4.125V4C11.625 2.25 10.25 0.9375 8.5 0.9375C8.0625 0.9375 7.1875 1.25 6.875 1.9375C6.75 2.1875 6.5 2.3125 6.25 2.3125C6 2.3125 5.75 2.1875 5.625 1.9375C5.3125 1.3125 4.5 0.9375 4 0.9375C2.3125 0.9375 0.875 2.3125 0.8125 4V4.1875C0.8125 5 1.1875 5.8125 1.75 6.375L2.1875 6.875Z"
+                                                        fill="#6C757D" fill-opacity="0.6" />
+                                                </svg>
+                                            </div>
+                                            <div class="like__count">175</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="tiles__card card">
+                                <a href="#" class="card__img">
+                                    <img src="img/topics/topics1.jpg" alt="pic">
+                                </a>
+                                <div class="card__text text">
+                                    <time datetime="2021-06-29" class="text__date">29.Jun.2021</time>
+                                    <h2><a href="#" class="text__title">Richard Norton photorealistic rendering as real
+                                            photos</a>
+                                    </h2>
+                                    <p>Many years ago, I worked for my parents who own a video production company.
+                                    </p>
+                                    <div class="text__bottom">
+                                        <a href="#" class="text__author">By: Peter Rowardson</a>
+                                        <div class="text__like like" onclick="increaseLikes(this)">
+                                            <div class="like__icon">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12"
+                                                    viewBox="0 0 13 12" fill="none">
+                                                    <path
+                                                        d="M6.3125 11.125C6 11.125 5.625 11 5.375 10.75C1.3125 7.1875 1.25 7.125 1.25 7.0625L1.1875 7C0.437499 6.25 0 5.1875 0 4.125V4C0.0625 1.75 1.875 0 4.125 0C4.8125 0 5.75 0.375 6.3125 1.125C6.875 0.375 7.875 0 8.5625 0C10.8125 0 12.5625 1.75 12.6875 4V4.125C12.6875 5.25 12.25 6.25 11.5 7.0625L11.4375 7.125C11.375 7.1875 10.875 7.625 7.3125 10.8125C7 11 6.6875 11.125 6.3125 11.125ZM2.1875 6.875C2.4375 7.125 3.6875 8 6 10C6.1875 10.1875 6.4375 10.1875 6.625 10C9 7.875 10.375 6.6875 10.6875 6.4375L10.75 6.375C11.375 5.75 11.6875 4.9375 11.6875 4.125V4C11.625 2.25 10.25 0.9375 8.5 0.9375C8.0625 0.9375 7.1875 1.25 6.875 1.9375C6.75 2.1875 6.5 2.3125 6.25 2.3125C6 2.3125 5.75 2.1875 5.625 1.9375C5.3125 1.3125 4.5 0.9375 4 0.9375C2.3125 0.9375 0.875 2.3125 0.8125 4V4.1875C0.8125 5 1.1875 5.8125 1.75 6.375L2.1875 6.875Z"
+                                                        fill="#6C757D" fill-opacity="0.6" />
+                                                </svg>
+                                            </div>
+                                            <div class="like__count">175</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="tiles__card card">
+                                <a href="#" class="card__img">
+                                    <img src="img/topics/topics1.jpg" alt="pic">
+                                </a>
+                                <div class="card__text text">
+                                    <time datetime="2021-06-29" class="text__date">29.Jun.2021</time>
+                                    <h2><a href="#" class="text__title">Richard Norton photorealistic rendering as real
+                                            photos</a>
+                                    </h2>
+                                    <p>Many years ago, I worked for my parents who own a video production company.
+                                    </p>
+                                    <div class="text__bottom">
+                                        <a href="#" class="text__author">By: Peter Rowardson</a>
+                                        <div class="text__like like" onclick="increaseLikes(this)">
+                                            <div class="like__icon">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12"
+                                                    viewBox="0 0 13 12" fill="none">
+                                                    <path
+                                                        d="M6.3125 11.125C6 11.125 5.625 11 5.375 10.75C1.3125 7.1875 1.25 7.125 1.25 7.0625L1.1875 7C0.437499 6.25 0 5.1875 0 4.125V4C0.0625 1.75 1.875 0 4.125 0C4.8125 0 5.75 0.375 6.3125 1.125C6.875 0.375 7.875 0 8.5625 0C10.8125 0 12.5625 1.75 12.6875 4V4.125C12.6875 5.25 12.25 6.25 11.5 7.0625L11.4375 7.125C11.375 7.1875 10.875 7.625 7.3125 10.8125C7 11 6.6875 11.125 6.3125 11.125ZM2.1875 6.875C2.4375 7.125 3.6875 8 6 10C6.1875 10.1875 6.4375 10.1875 6.625 10C9 7.875 10.375 6.6875 10.6875 6.4375L10.75 6.375C11.375 5.75 11.6875 4.9375 11.6875 4.125V4C11.625 2.25 10.25 0.9375 8.5 0.9375C8.0625 0.9375 7.1875 1.25 6.875 1.9375C6.75 2.1875 6.5 2.3125 6.25 2.3125C6 2.3125 5.75 2.1875 5.625 1.9375C5.3125 1.3125 4.5 0.9375 4 0.9375C2.3125 0.9375 0.875 2.3125 0.8125 4V4.1875C0.8125 5 1.1875 5.8125 1.75 6.375L2.1875 6.875Z"
+                                                        fill="#6C757D" fill-opacity="0.6" />
+                                                </svg>
+                                            </div>
+                                            <div class="like__count">175</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="tiles__card card">
+                                <a href="#" class="card__img">
+                                    <img src="img/topics/topics1.jpg" alt="pic">
+                                </a>
+                                <div class="card__text text">
+                                    <time datetime="2021-06-29" class="text__date">29.Jun.2021</time>
+                                    <h2><a href="#" class="text__title">Richard Norton photorealistic rendering as real
+                                            photos</a>
+                                    </h2>
+                                    <p>Many years ago, I worked for my parents who own a video production company.
+                                    </p>
+                                    <div class="text__bottom">
+                                        <a href="#" class="text__author">By: Peter Rowardson</a>
+                                        <div class="text__like like" onclick="increaseLikes(this)">
+                                            <div class="like__icon">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12"
+                                                    viewBox="0 0 13 12" fill="none">
+                                                    <path
+                                                        d="M6.3125 11.125C6 11.125 5.625 11 5.375 10.75C1.3125 7.1875 1.25 7.125 1.25 7.0625L1.1875 7C0.437499 6.25 0 5.1875 0 4.125V4C0.0625 1.75 1.875 0 4.125 0C4.8125 0 5.75 0.375 6.3125 1.125C6.875 0.375 7.875 0 8.5625 0C10.8125 0 12.5625 1.75 12.6875 4V4.125C12.6875 5.25 12.25 6.25 11.5 7.0625L11.4375 7.125C11.375 7.1875 10.875 7.625 7.3125 10.8125C7 11 6.6875 11.125 6.3125 11.125ZM2.1875 6.875C2.4375 7.125 3.6875 8 6 10C6.1875 10.1875 6.4375 10.1875 6.625 10C9 7.875 10.375 6.6875 10.6875 6.4375L10.75 6.375C11.375 5.75 11.6875 4.9375 11.6875 4.125V4C11.625 2.25 10.25 0.9375 8.5 0.9375C8.0625 0.9375 7.1875 1.25 6.875 1.9375C6.75 2.1875 6.5 2.3125 6.25 2.3125C6 2.3125 5.75 2.1875 5.625 1.9375C5.3125 1.3125 4.5 0.9375 4 0.9375C2.3125 0.9375 0.875 2.3125 0.8125 4V4.1875C0.8125 5 1.1875 5.8125 1.75 6.375L2.1875 6.875Z"
+                                                        fill="#6C757D" fill-opacity="0.6" />
+                                                </svg>
+                                            </div>
+                                            <div class="like__count">175</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="tiles__card card">
+                                <a href="#" class="card__img">
+                                    <img src="img/topics/topics1.jpg" alt="pic">
+                                </a>
+                                <div class="card__text text">
+                                    <time datetime="2021-06-29" class="text__date">29.Jun.2021</time>
+                                    <h2><a href="#" class="text__title">Richard Norton photorealistic rendering as real
+                                            photos</a>
+                                    </h2>
+                                    <p>Many years ago, I worked for my parents who own a video production company.
+                                    </p>
+                                    <div class="text__bottom">
+                                        <a href="#" class="text__author">By: Peter Rowardson</a>
+                                        <div class="text__like like" onclick="increaseLikes(this)">
+                                            <div class="like__icon">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12"
+                                                    viewBox="0 0 13 12" fill="none">
+                                                    <path
+                                                        d="M6.3125 11.125C6 11.125 5.625 11 5.375 10.75C1.3125 7.1875 1.25 7.125 1.25 7.0625L1.1875 7C0.437499 6.25 0 5.1875 0 4.125V4C0.0625 1.75 1.875 0 4.125 0C4.8125 0 5.75 0.375 6.3125 1.125C6.875 0.375 7.875 0 8.5625 0C10.8125 0 12.5625 1.75 12.6875 4V4.125C12.6875 5.25 12.25 6.25 11.5 7.0625L11.4375 7.125C11.375 7.1875 10.875 7.625 7.3125 10.8125C7 11 6.6875 11.125 6.3125 11.125ZM2.1875 6.875C2.4375 7.125 3.6875 8 6 10C6.1875 10.1875 6.4375 10.1875 6.625 10C9 7.875 10.375 6.6875 10.6875 6.4375L10.75 6.375C11.375 5.75 11.6875 4.9375 11.6875 4.125V4C11.625 2.25 10.25 0.9375 8.5 0.9375C8.0625 0.9375 7.1875 1.25 6.875 1.9375C6.75 2.1875 6.5 2.3125 6.25 2.3125C6 2.3125 5.75 2.1875 5.625 1.9375C5.3125 1.3125 4.5 0.9375 4 0.9375C2.3125 0.9375 0.875 2.3125 0.8125 4V4.1875C0.8125 5 1.1875 5.8125 1.75 6.375L2.1875 6.875Z"
+                                                        fill="#6C757D" fill-opacity="0.6" />
+                                                </svg>
+                                            </div>
+                                            <div class="like__count">175</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <ul class="tiles__pagination pagination">
+                                <li class="pagination__item_active"><a href="#" class="pagination__link">01</a></li>
+                                <li class="pagination__item"><a href="#" class="pagination__link">02</a></li>
+                                <li class="pagination__item"><a href="#" class="pagination__link">Next Page</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
         <footer class="wrapper__footer footer">
             <div class="footer__container">
@@ -201,6 +371,8 @@
     <script src="js/burger.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/like.js"></script>
+    <script src="js/modal.js"></script>
 </body>
 
 </html>
