@@ -1,5 +1,5 @@
 
-const swiper = new Swiper('.swiper', {
+var swiper = new Swiper('.swiper', {
   loop: true,
   effect: "fade",
   pagination: {
@@ -12,9 +12,35 @@ const swiper = new Swiper('.swiper', {
   },
 });
 
+var swiper = new Swiper('.swiper-mini', {
+  loop: true,
+  slidesPerView: 2,
+  spaceBetween: 30,
+  freeMode:true,
+  pagination: {
+  el: ".swiper-pagination",
+  clickable: true,
+  },
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false
+  },
+  breakpoints:{
+    320:{
+      slidesPerView: 1,
+      spaceBetween: 0,
+    },
+    800:{
+      slidesPerView: 2,
+      spaceBetween: 30,
+    }
+  }
+});
+
+
 
 document.addEventListener("DOMContentLoaded", function() {
-  var sections = document.querySelectorAll('.page__slider, .page__categories, .page__featured-topics, .page__big-world');
+  var elementsToAnimate = document.querySelectorAll('.hidden');
 
   function isElementPartiallyInViewport(el) {
     var rect = el.getBoundingClientRect();
@@ -27,11 +53,11 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   function handleScroll() {
-    sections.forEach(function(section) {
-      if (isElementPartiallyInViewport(section)) {
-        section.classList.add('visible');
+    elementsToAnimate.forEach(function(element) {
+      if (isElementPartiallyInViewport(element)) {
+        element.classList.add('visible');
       } else {
-        section.classList.remove('visible');
+        element.classList.remove('visible');
       }
     });
   }
@@ -40,6 +66,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
   handleScroll();
 });
+
+
 
 
 
