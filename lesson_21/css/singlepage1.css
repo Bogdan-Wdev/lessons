@@ -474,6 +474,7 @@ body {
 
 .sub-menu__list {
   padding: 1.25rem;
+  color: rgba(248, 249, 250, 0.6);
   background-color: rgb(33, 37, 41);
   border-radius: 0.3125rem;
 }

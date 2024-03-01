@@ -16,21 +16,21 @@ var swiper = new Swiper('.swiper-mini', {
   loop: true,
   slidesPerView: 2,
   spaceBetween: 30,
-  freeMode:true,
+  freeMode: true,
   pagination: {
-  el: ".swiper-pagination",
-  clickable: true,
+    el: ".swiper-pagination",
+    clickable: true,
   },
   autoplay: {
     delay: 2500,
     disableOnInteraction: false
   },
-  breakpoints:{
-    320:{
+  breakpoints: {
+    320: {
       slidesPerView: 1,
       spaceBetween: 0,
     },
-    800:{
+    800: {
       slidesPerView: 2,
       spaceBetween: 30,
     }
@@ -38,8 +38,30 @@ var swiper = new Swiper('.swiper-mini', {
 });
 
 
+var swiper = new Swiper(".insaneSwiper", {
+  loop: true,
+  effect: "fade",
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    renderBullet: function (index, className) {
+      return '<span class="' + className + '">' + (index < 9 ? '0' : '') + (index + 1) + "</span>";
+    },
+  },
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false
+  },
+});
 
-document.addEventListener("DOMContentLoaded", function() {
+
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
   var elementsToAnimate = document.querySelectorAll('.hidden');
 
   function isElementPartiallyInViewport(el) {
@@ -53,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   function handleScroll() {
-    elementsToAnimate.forEach(function(element) {
+    elementsToAnimate.forEach(function (element) {
       if (isElementPartiallyInViewport(element)) {
         element.classList.add('visible');
       } else {
