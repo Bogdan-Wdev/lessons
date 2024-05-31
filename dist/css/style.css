@@ -708,7 +708,10 @@ body::after {
 }
 .block__portfolio {
   position: relative;
-  padding-right: 1.25rem
+  padding-right: 1.25rem;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content
 }
 .block__portfolio::before {
   content: "";
@@ -1040,9 +1043,6 @@ body::after {
   .page__hero {
     margin-bottom: 13.6875rem
   }
-  .body-hero__item:first-child {
-    margin-right: 5rem
-  }
   .body-hero__item:first-child > :not(:last-child) {
     margin-bottom: 2.5rem
   }
@@ -1137,9 +1137,6 @@ body::after {
   }
   .page__hero {
     margin-bottom: 2.5rem
-  }
-  .body-hero__item:first-child {
-    margin-right: 1.25rem
   }
   .body-hero__item:first-child > :not(:last-child) {
     margin-bottom: .9375rem
@@ -1544,16 +1541,6 @@ body::after {
       margin-bottom: calc(2.5rem + 11.1875 * (100vw - 20rem)/ 55.625)
     }
   }
-  @supports (margin-right:clamp(1.25rem ,-0.0983146067rem + 6.7415730337vw ,5rem)) {
-    .body-hero__item:first-child {
-      margin-right: clamp(1.25rem ,-.0983146067rem + 6.7415730337vw ,5rem)
-    }
-  }
-  @supports not (margin-right:clamp(1.25rem ,-0.0983146067rem + 6.7415730337vw ,5rem)) {
-    .body-hero__item:first-child {
-      margin-right: calc(1.25rem + 3.75 * (100vw - 20rem)/ 55.625)
-    }
-  }
   @supports (margin-bottom:clamp(0.9375rem ,0.3757022472rem + 2.808988764vw ,2.5rem)) {
     .body-hero__item:first-child > :not(:last-child) {
       margin-bottom: clamp(.9375rem ,.3757022472rem + 2.808988764vw ,2.5rem)
@@ -1772,6 +1759,18 @@ body::after {
   @supports not (margin-bottom:clamp(2.5rem ,0.0280898876rem + 12.3595505618vw ,9.375rem)) {
     .carrers__title {
       margin-bottom: calc(2.5rem + 6.875 * (100vw - 20rem)/ 55.625)
+    }
+  }
+}
+@media (min-width:38.125em) and (max-width:90em) {
+  @supports (margin-right:clamp(1.25rem ,-1.5060240964rem + 7.2289156627vw ,5rem)) {
+    .body-hero__item:first-child {
+      margin-right: clamp(1.25rem ,-1.5060240964rem + 7.2289156627vw ,5rem)
+    }
+  }
+  @supports not (margin-right:clamp(1.25rem ,-1.5060240964rem + 7.2289156627vw ,5rem)) {
+    .body-hero__item:first-child {
+      margin-right: calc(1.25rem + 3.75 * (100vw - 38.125rem)/ 51.875)
     }
   }
 }
