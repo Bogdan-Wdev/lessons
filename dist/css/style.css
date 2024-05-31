@@ -1368,9 +1368,6 @@ body::after {
     display: block;
     margin-right: 0
   }
-  .body-hero__item:first-child {
-    margin-right: 0
-  }
   .body-hero__item:nth-child(2) {
     display: none
   }
@@ -1391,6 +1388,11 @@ body::after {
   }
   .item-hero__buttons .buttons-hero__btn {
     width: 100%
+  }
+}
+@media (max-width:38.12375em) {
+  .body-hero__item:first-child {
+    margin-right: 0
   }
 }
 @media (max-width:38.125em) and (max-width:20em) {
