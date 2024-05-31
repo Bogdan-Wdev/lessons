@@ -301,7 +301,20 @@ body::after {
   min-height: 5rem
 }
 .header__logo {
-  z-index: 1
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateY(1.25rem);
+  transform: translateY(1.25rem)
+}
+.header__logo._watcher-view {
+  transition: opacity 1.8s .5s,visibility 1.2s .5s,-webkit-transform 1.2s .5s;
+  transition: opacity 1.8s .5s,visibility 1.2s .5s,transform 1.2s .5s;
+  transition: opacity 1.8s .5s,visibility 1.2s .5s,transform 1.2s .5s,-webkit-transform 1.2s .5s;
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateY(0);
+  transform: translateY(0)
 }
 .header__menu {
   display: flex;
@@ -311,6 +324,21 @@ body::after {
   font-weight: 500;
   line-height: 2.08;
   flex: 1 1 auto
+}
+.header .menu__item {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateY(1.25rem);
+  transform: translateY(1.25rem)
+}
+.header .menu__item._watcher-view {
+  transition: opacity 1.8s .9s,visibility 1.2s .9s,-webkit-transform 1.2s .9s;
+  transition: opacity 1.8s .9s,visibility 1.2s .9s,transform 1.2s .9s;
+  transition: opacity 1.8s .9s,visibility 1.2s .9s,transform 1.2s .9s,-webkit-transform 1.2s .9s;
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateY(0);
+  transform: translateY(0)
 }
 .header .menu__item:hover .menu__link::after {
   -webkit-transform: scale(1);
@@ -336,7 +364,20 @@ body::after {
   -webkit-animation: puls 1.3s infinite;
   animation: puls 1.3s infinite;
   -webkit-animation-delay: 5s;
-  animation-delay: 5s
+  animation-delay: 5s;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateY(1.25rem);
+  transform: translateY(1.25rem)
+}
+.header__btn._watcher-view {
+  transition: opacity 1.8s 1.5s,visibility 1.2s 1.5s,-webkit-transform 1.2s 1.5s;
+  transition: opacity 1.8s 1.5s,visibility 1.2s 1.5s,transform 1.2s 1.5s;
+  transition: opacity 1.8s 1.5s,visibility 1.2s 1.5s,transform 1.2s 1.5s,-webkit-transform 1.2s 1.5s;
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateY(0);
+  transform: translateY(0)
 }
 @-webkit-keyframes puls {
   0% {
@@ -591,7 +632,7 @@ body::after {
   visibility: hidden
 }
 .skills__title._watcher-view {
-  transition: opacity 1.2s,visibility 1.2s;
+  transition: opacity 1.2s .5s,visibility 1.2s .5s;
   opacity: 1;
   visibility: visible
 }
@@ -1013,6 +1054,12 @@ body::after {
   .item-gallery__text {
     opacity: 0;
     visibility: hidden
+  }
+  html.touch .item-gallery__text {
+    padding: 1.4375rem 3.75rem 1.4375rem 1.4375rem;
+    background-color: #fff;
+    opacity: 1;
+    visibility: visible
   }
 }
 @media (min-width:75.625em) {
