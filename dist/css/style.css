@@ -99,7 +99,20 @@ h6 {
   width: 100%
 }
 .icon-menu {
-  display: none
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateY(1.25rem);
+  transform: translateY(1.25rem)
+}
+.icon-menu._watcher-view {
+  transition: opacity 1.8s .5s,visibility 1.2s .5s,-webkit-transform 1.2s .5s;
+  transition: opacity 1.8s .5s,visibility 1.2s .5s,transform 1.2s .5s;
+  transition: opacity 1.8s .5s,visibility 1.2s .5s,transform 1.2s .5s,-webkit-transform 1.2s .5s;
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateY(0);
+  transform: translateY(0)
 }
 body::after {
   content: "";
@@ -745,14 +758,17 @@ body::after {
 }
 .block__title {
   color: #1f2937;
-  font-weight: 600
+  font-weight: 600;
+  max-width: 100%;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content
 }
 .block__portfolio {
   position: relative;
   padding-right: 1.25rem;
-  min-width: -webkit-fit-content;
-  min-width: -moz-fit-content;
-  min-width: fit-content
+  max-width: 100%;
+  min-width: auto
 }
 .block__portfolio::before {
   content: "";
