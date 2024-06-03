@@ -530,7 +530,7 @@ body::after {
   opacity: 1;
   visibility: visible;
   left: 0;
-  transition: opacity 1.8s .5s,visibility 1.2s .5s,left 1.2s .5s
+  transition: opacity 1.2s .3s,visibility 1.2s .3s,left 1.2s .3s
 }
 .body-hero__item:first-child > :nth-child(4) {
   margin-bottom: 1.25rem
@@ -580,7 +580,7 @@ body::after {
   opacity: 1;
   visibility: visible;
   right: 0;
-  transition: visibility 1.2s .5s,right 1.2s .5s,opacity 1.8s .5s
+  transition: visibility 1.2s .3s,right 1.2s .3s,opacity 1.2s .3s
 }
 .item-hero__title {
   position: relative;
@@ -592,7 +592,7 @@ body::after {
   padding-left: 7rem
 }
 .item-hero__title._watcher-view {
-  transition: opacity 1.8s .5s,visibility 1.2s .5s,left 1.2s .5s;
+  transition: opacity 1.2s .3s,visibility 1.2s .3s,left 1.2s .3s;
   opacity: 1;
   visibility: visible;
   left: 0
@@ -616,7 +616,7 @@ body::after {
   left: -35%
 }
 .item-hero__subtitle._watcher-view {
-  transition: opacity 1.8s .5s,visibility 1.2s .5s,left 1.2s .5s;
+  transition: opacity 1.2s .3s,visibility 1.2s .3s,left 1.2s .3s;
   opacity: 1;
   visibility: visible;
   left: 0
@@ -627,7 +627,7 @@ body::after {
   visibility: hidden
 }
 .item-hero__buttons._watcher-view {
-  transition: opacity 1.8s .5s,visibility 1.2s .5s;
+  transition: opacity 1.2s .3s,visibility 1.2s .3s;
   opacity: 1;
   visibility: visible;
   left: 0
@@ -645,7 +645,7 @@ body::after {
   visibility: hidden
 }
 .skills__title._watcher-view {
-  transition: opacity 1.2s .5s,visibility 1.2s .5s;
+  transition: opacity 1.2s .3s,visibility 1.2s .3s;
   opacity: 1;
   visibility: visible
 }
@@ -691,7 +691,7 @@ body::after {
   opacity: 1;
   visibility: visible;
   left: 0;
-  transition: opacity 1.2s .5s,visibility 1.2s .5s,left 1.2s .5s
+  transition: opacity 1.2s .3s,visibility 1.2s .3s,left 1.2s .3s
 }
 .item-skills__block {
   display: grid;
@@ -835,7 +835,7 @@ body::after {
   top: -1.25rem
 }
 .gallery__title._watcher-view {
-  transition: opacity 1.8s .5s,visibility 1.2s .5s,left 1.2s .5s,top 1.2s .5s;
+  transition: opacity 1.2s .3s,visibility 1.2s .3s,left 1.2s .3s,top 1.2s .3s;
   opacity: 1;
   visibility: visible;
   left: 0;
@@ -865,7 +865,7 @@ body::after {
   left: 10%
 }
 .body-gallery__item._watcher-view {
-  transition: opacity 1.8s .5s,visibility 1.2s .5s,left 1.2s .5s,top 1.2s .5s;
+  transition: opacity 1.2s .3s,visibility 1.2s .3s,left 1.2s .3s,top 1.2s .3s;
   opacity: 1;
   visibility: visible;
   left: 0;
@@ -980,7 +980,7 @@ body::after {
   top: 30%
 }
 .planning__card._watcher-view {
-  transition: opacity 1.8s .5s,visibility 1.2s .5s,top 1.2s .5s;
+  transition: opacity 1.2s .3s,visibility 1.2s .3s,top 1.2s .3s;
   opacity: 1;
   visibility: visible;
   top: 0
@@ -1015,7 +1015,7 @@ body::after {
   top: -1.25rem
 }
 .carrers__title._watcher-view {
-  transition: opacity 1.8s .5s,visibility 1.2s .5s,left 1.2s .5s,top 1.2s .5s;
+  transition: opacity 1.2s .3s,visibility 1.2s .3s,left 1.2s .3s,top 1.2s .3s;
   opacity: 1;
   visibility: visible;
   top: 0
@@ -1044,7 +1044,7 @@ body::after {
   clip-path: polygon(10% 0,100% 0,100% 100%,0 100%);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
-  transition: left 1.8s .5s
+  transition: left 1.2s .5s
 }
 .table__item._watcher-view::before {
   left: 100%
